@@ -76,6 +76,8 @@ void PrintJsonArray(const Range& range) {
     std::cout << ",";
     PrintJson(*current);
   }
+
+  std::cout << "]";
 }
 
 template <typename T, std::size_t N>
