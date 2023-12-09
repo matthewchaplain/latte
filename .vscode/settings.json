@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "source_location": "cpp"
+        "source_location": "cpp",
+        "string_view": "cpp",
+        "chrono": "cpp",
+        "variant": "cpp"
     }
 }
