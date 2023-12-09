@@ -42,7 +42,7 @@ void PrintJsonObjectKeyValuePairs(std::size_t index, std::string_view key, const
                                   const KeyValuePairs&... key_value_pairs) {
   using latte::PrintJson;
 
-  if (index) {
+  if (index != 0) {
     std::cout << ", ";
   }
 

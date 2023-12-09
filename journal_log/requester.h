@@ -3,10 +3,10 @@
 
 #include "null_logger.h"
 
-template <typename T, template <typename> typename Logger = NullLogger>
+template <typename RequestType, template <typename> typename Logger = NullLogger>
 class Requester {
  public:
-  void Request(const T& value,
+  void Request(const RequestType& value,
                const std::experimental::source_location& source = std::experimental::source_location::current()) {
     ++sequence_number_;
     logger_.LogRequest(sequence_number_, value, source);
@@ -14,6 +14,6 @@ class Requester {
   }
 
  private:
-  Logger<T> logger_{"requester"};
+  Logger<RequestType> logger_{"requester"};
   std::uint32_t sequence_number_{0};
 };
