@@ -1,7 +1,9 @@
 #pragma once
 #include <cstdint>
 
-template <typename T, template <typename> typename Logger>
+#include "null_logger.h"
+
+template <typename T, template <typename> typename Logger = NullLogger>
 class Requester {
  public:
   void Request(const T& value,
