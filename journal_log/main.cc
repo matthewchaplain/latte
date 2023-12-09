@@ -2,6 +2,7 @@
 
 #include "journal_logger.h"
 #include "latte/print_json.h"
+#include "requester.h"
 
 namespace test {
 
@@ -16,8 +17,9 @@ void PrintJson(const MyTest& my_test);
 
 int main() {
   using Type = std::variant<int, test::MyTest>;
-  JournalLogger<Type> logger("my_request");
-  logger.LogRequest(42, test::MyTest{34, {1, 2, 3}});
+  Requester<Type, JournalLogger> requester;
+  requester.Request(76);
+  requester.Request(test::MyTest{34, {1, 2, 3}});
 }
 
 namespace test {
