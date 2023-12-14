@@ -13,13 +13,17 @@ namespace latte {
 class Value {
  public:
   template <typename ValueType,
-            typename = std::enable_if<!std::is_same_v<ValueType, Value> && std::is_copy_constructible_v<ValueType>>>
+            typename = std::enable_if_t<!std::is_same_v<ValueType, Value> && std::is_copy_constructible_v<ValueType>>>
   Value(const ValueType& value)
       : memory_buffer_{}, concept_{::new(memory_buffer_.data()) ValueModel<ValueType>(value)} {
     static_assert(std::integral_constant<std::size_t, sizeof(ValueType)>::value <=
                       std::integral_constant<std::size_t, memory_buffer_size>::value,
                   "Expand memory_buffer_size if necessary");
   }
+
+  template <std::size_t N>
+  Value(const char (&value)[N])
+      : memory_buffer_{}, concept_{::new(memory_buffer_.data()) ValueModel<std::string_view>(value)} {}
 
   Value(const Value& other);
 
