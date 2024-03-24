@@ -19,7 +19,8 @@
 				"ms-azuretools.vscode-docker",
 				"redhat.vscode-yaml",
 				"hbenl.vscode-test-explorer",
-				"llvm-vs-code-extensions.vscode-clangd"
+				"llvm-vs-code-extensions.vscode-clangd",
+				"usernamehw.errorlens"
 			]
 		}
 	}
