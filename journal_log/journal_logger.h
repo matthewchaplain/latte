@@ -1,11 +1,11 @@
 #pragma once
 
-#include <cstdint>
+#include "latte/log.h"
+
 #include <functional>
 #include <string>
 #include <utility>
-
-#include "latte/log.h"
+#include <cstdint>
 
 template <typename RequestType>
 class JournalLogger {

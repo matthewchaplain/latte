@@ -1,8 +1,8 @@
 #pragma once
-#include <cstdint>
-#include <experimental/source_location>
-
 #include "null_logger.h"
+
+#include <experimental/source_location>
+#include <cstdint>
 
 template <typename RequestType, template <typename> typename Logger = NullLogger>
 class Requester {

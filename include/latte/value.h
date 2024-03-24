@@ -1,12 +1,12 @@
 #pragma once
 
+#include "latte/print_json.h"
+
 #include <array>
-#include <cstddef>
-#include <cstdlib>
 #include <memory>
 #include <type_traits>
-
-#include "latte/print_json.h"
+#include <cstddef>
+#include <cstdlib>
 
 namespace latte {
 

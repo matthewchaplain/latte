@@ -1,8 +1,8 @@
-#include <array>
-
 #include "journal_logger.h"
 #include "latte/print_json.h"
 #include "requester.h"
+
+#include <array>
 
 namespace test {
 

@@ -1,12 +1,12 @@
 #pragma once
 
+#include "latte/value.h"
+
 #include <chrono>
 #include <experimental/source_location>
 #include <iomanip>
 #include <iostream>
 #include <string_view>
-
-#include "latte/value.h"
 
 namespace latte {
 

@@ -1,13 +1,13 @@
 #pragma once
 
+#include "latte/overloaded.h"
+
 #include <array>
-#include <cstdint>
-#include <cstdlib>
 #include <iostream>
 #include <string_view>
 #include <variant>
-
-#include "latte/overloaded.h"
+#include <cstdint>
+#include <cstdlib>
 
 namespace latte {
 

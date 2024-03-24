@@ -1,6 +1,7 @@
 #pragma once
 
 #include <experimental/source_location>
+#include <string>
 
 template <typename RequestType>
 class NullLogger {
