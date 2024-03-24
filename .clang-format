@@ -10,6 +10,7 @@ IncludeCategories:
     CaseSensitive: false
   - Regex: ^".*"
     Priority: 2
+    SortPriority: 3
     CaseSensitive: false
   - Regex: ^<.*\.h.*>
     Priority: 3

@@ -1,6 +1,6 @@
 #include "journal_logger.h"
-#include "latte/print_json.h"
 #include "requester.h"
+#include "latte/print_json.h"
 
 #include <array>
 
